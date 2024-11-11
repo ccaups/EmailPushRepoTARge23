@@ -12,6 +12,6 @@ jobs:
         username: ${{ secrets.MAIL_USERNAME }}
         password: ${{ secrets.MAIL_PASSWORD }}
         subject: "YoUvE g O t MaIl!1!!1!!!!"
-        body: "tuvipost on kiirem, aga kommiti tegi ${{github.event.pusher.name}} repost ${{github.repository}} sõnumiga ${{github.event.head_commit.message}} muudatused on lahedad, võrkpall on võrratu"
+        body: "tuvipost on kiirem, aga kommiti tegi ${{github.event.pusher.name}} repost ${{github.repository}} sõnumiga ${{github.event.head_commit.message}} muudatused on nii lahedad, võrkpall on võrratu"
         to: "ccaups@gmail.com"
         from: "Grubhub actions"
