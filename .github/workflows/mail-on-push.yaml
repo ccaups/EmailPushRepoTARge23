@@ -1,0 +1,17 @@
+on:
+  push:
+jobs:
+  mail_on_push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send Mail
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587 #comment
+        username: ${{ secrets.MAIL_USERNAME }}
+        password: ${{ secrets.MAIL_PASSWORD }}
+        subject: "YoUvE g O t MaIl!1!!1!!!!"
+        body: "tuvipost on kiirem, aga kommiti tegi ${{github.event.pusher.name}} repost ${{github.repository}} sõnumiga ${{github.event.head_commit.message}} muudatused on lahedad, võrkpall on võrratu"
+        to: "ccaups@gmail.com"
+        from: "Grubhub actions"
